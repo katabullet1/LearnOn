@@ -1,0 +1,41 @@
+
+
+{% extends 'base.html' %} {% block content %} {% load static %} {% block head %}
+<link rel="stylesheet" href="{% static '/home.css' %}" />
+{% endblock head %}
+<div class="container">
+  <h1><a href="/"> LEARNON </a></h1>
+  <div class="row d-flex justify-content-center">
+    <div class="main-div col-12">
+      <div class="heading-div">
+       
+        <h2 class="heading">WELCOME, USER! <p style="font-size:100px">&#129303;</p> </h2>
+      </div>
+      <form method="POST">
+        {% csrf_token %}
+        <div class="custom-room-div" >
+            <input
+              type="text"
+              class="form-control"
+              name="input_roomname"
+              required
+              placeholder="Enter any room code here . . ."
+            />
+            <button class='custom-join'>Enter</button>
+        </div>  
+      </form>
+      <div class="list-of-rooms">
+        <p>list of existing Clas-rooms</p>
+        {% for roomname in rooms_list%}
+
+        <div class="room-div">
+          <p class="room-name">{{roomname}}</p>
+          
+          <a href="/room/{{roomname}}" class="join">Join</a>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock content %}

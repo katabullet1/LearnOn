@@ -1,0 +1,34 @@
+
+
+{% extends 'base.html' %} {% block content %} {% load static %} {% block head %}
+<link rel="stylesheet" href="{% static '/home.css' %}" />
+{% endblock head %}
+<div class="container">
+  <h1><a href="/"> HOME </a></h1>
+  <div class="row d-flex justify-content-center">
+    <div class="main-div col-12">
+      <div class="heading-div">
+       
+        <h2 class="heading">WELCOME, USER! <p style="font-size:100px">&#129303;</p> </h2>
+      </div>
+       <div class="list-of-rooms">
+        <form action="" method="POST"> {% csrf_token %}
+          text: <input type="text" name="handle" value=""><br>
+          <input type="submit" value="Submit">
+          </form>
+
+          <form action="" method="POST"> {% csrf_token %}
+            text: <input type="text" name="handle3" value=""><br>
+            <input type="submit" value="Submit">
+            </form>
+          <ul>
+            <li>bellow</li>
+            <li>{{ ses }}</li>
+            .<li>{{ ses3 }}</li>
+             
+          </ul>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock content %}
