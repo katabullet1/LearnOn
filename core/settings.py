@@ -29,9 +29,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = "ng)ql=h%($)uwzx$p%ms-14#zxl09ix*7zo2r7d8ag8#1-v5@-" #'czq5w9hzxlrag0k3$gt+zwglzo&9&1e()_evo&3$j*jewz7jf7'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['.herokuapp.com', '127.0.0.1', '.vercel.app', '.railway.app']
+ALLOWED_HOSTS = ['.amazonaws.com, .herokuapp.com', '127.0.0.1', '.vercel.app', '.railway.app']
 
 # Application definition
 
@@ -92,8 +92,8 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'test1',
         'USER': 'postgres',
-        'PASSWORD': os.getenv("POSTGRES_PASSWORD"), 
-        'HOST': 'localhost', 
+        'PASSWORD': learnon20204, 
+        'HOST': 'database-1.chmw2oys67t3.eu-north-1.rds.amazonaws.com', 
         'PORT': '5432',
         }
     }
