@@ -90,10 +90,10 @@ load_dotenv()
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'test1',
-        'USER': 'postgres',
-        'PASSWORD': "learnon20204", 
-        'HOST': 'database-1.chmw2oys67t3.eu-north-1.rds.amazonaws.com', 
+        'NAME': "takeone", #'test1',
+        'USER': "divine", #'postgres',
+        'PASSWORD':"learnon2024", # os.getenv("POSTGRES_PASSWORD"), 
+        'HOST': "database-2.chmw2oys67t3.eu-north-1.rds.amazonaws.com", #'localhost', 
         'PORT': '5432',
         }
     }
