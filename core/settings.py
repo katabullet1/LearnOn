@@ -31,7 +31,7 @@ SECRET_KEY = "ng)ql=h%($)uwzx$p%ms-14#zxl09ix*7zo2r7d8ag8#1-v5@-" #'czq5w9hzxlra
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['.amazonaws.com, .herokuapp.com', '127.0.0.1', '.vercel.app', '.railway.app']
+ALLOWED_HOSTS = ['51.20.51.65', '.amazonaws.com, .herokuapp.com', '127.0.0.1', '.vercel.app', '.railway.app']
 
 # Application definition
 
